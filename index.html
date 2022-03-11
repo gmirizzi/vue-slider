@@ -26,8 +26,8 @@
 					<img :src="thumb.img" :alt="thumb.title">
 				</div>
 
-				<button class="btn-control btn-previus">&and;</button>
-				<button class="btn-control btn-next">&or;</button>
+				<button class="btn-control btn-previus" @click="previous">&and;</button>
+				<button class="btn-control btn-next" @click="next">&or;</button>
 			</div>
 		</div>
 	</div>

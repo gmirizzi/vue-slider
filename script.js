@@ -39,6 +39,22 @@ const app=new Vue(
         data:{
             activeIndex:0,
             thumbs:elements
+        },
+        methods: {
+            next(){
+                if (this.activeIndex==this.thumbs.length-1){
+                    this.activeIndex=0
+                } else {
+                    this.activeIndex++
+                }
+            },
+            previous(){
+                if (this.activeIndex==0){
+                    this.activeIndex=this.thumbs.length-1
+                } else {
+                    this.activeIndex--
+                }
+            }
         }
     }
 )
