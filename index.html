@@ -12,7 +12,7 @@
 
 <body>
 	<div id="root">
-		<div class="slider">
+		<div class="slider" @mouseover="stopAuto" @mouseleave="autoScroll">
 			<div class="slide">
 				<img :src="thumbs[activeIndex].img" :alt="thumbs[activeIndex].title">
 				<div class="slide-contents">

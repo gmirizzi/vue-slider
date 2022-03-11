@@ -23,41 +23,47 @@ const text = [
 ];
 
 //ciclo per popolare l'array elements all'interno di data
-elements=[];
+elements = [];
 for (let index = 0; index < 5; index++) {
     const item = {
-        img:items[index],
-        title:title[index],
-        text:text[index]
+        img: items[index],
+        title: title[index],
+        text: text[index]
     };
     elements.push(item)
 }
 
-const app=new Vue(
+const app = new Vue(
     {
-        el:"#root",
-        data:{
-            activeIndex:0,
-            thumbs:elements
+        el: "#root",
+        data: {
+            activeIndex: 0,
+            thumbs: elements
         },
         methods: {
-            next(){
-                if (this.activeIndex==this.thumbs.length-1){
-                    this.activeIndex=0
+            next() {
+                if (this.activeIndex == this.thumbs.length - 1) {
+                    this.activeIndex = 0
                 } else {
                     this.activeIndex++
                 }
             },
-            previous(){
-                if (this.activeIndex==0){
-                    this.activeIndex=this.thumbs.length-1
+            previous() {
+                if (this.activeIndex == 0) {
+                    this.activeIndex = this.thumbs.length - 1
                 } else {
                     this.activeIndex--
                 }
+            },
+            autoScroll() {
+                interval = setInterval(this.next, 3000)
+            },
+            stopAuto() {
+                clearInterval(interval)
             }
         },
-        created(){
-            setInterval(this.next,3000)
+        created() {
+            interval=setInterval(this.next, 3000)
         }
     }
 )
