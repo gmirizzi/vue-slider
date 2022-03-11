@@ -24,7 +24,7 @@
 			</div>
 
 			<div class="thumbs">
-				<div v-for="(thumb, index) in thumbs" class="thumb" :class="index==activeIndex?'active':''">
+				<div v-for="(thumb, index) in thumbs" class="thumb" :class="index==activeIndex?'active':''" @click="activeIndex=index">
 					<img :src="thumb.img" :alt="thumb.title">
 				</div>
 
