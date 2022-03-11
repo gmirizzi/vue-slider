@@ -14,12 +14,10 @@
 	<div id="root">
 		<div class="slider">
 			<div class="slide">
-				<img src="img/01.jpg" alt="Svezia">
+				<img :src="thumbs[activeIndex].img" :alt="thumbs[activeIndex].title">
 				<div class="slide-contents">
-					<h2 class="slide-title">Svezia</h2>
-					<p class="slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus
-						voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque
-						provident totam omnis, magnam dolores dolorum corporis.</p>
+					<h2 class="slide-title">{{thumbs[activeIndex].title}}</h2>
+					<p class="slide-text">{{thumbs[activeIndex].text}}</p>
 				</div>
 			</div>
 
