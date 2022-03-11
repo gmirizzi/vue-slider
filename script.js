@@ -21,3 +21,20 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
+
+const app=new Vue(
+    {
+        el:"#root",
+        data:
+            elements=[]
+    }
+)
+
+for (let index = 0; index < 5; index++) {
+    const item = {
+        img:items[index],
+        title:title[index],
+        text:text[index]
+    };
+    elements.push(item)
+}
