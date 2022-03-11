@@ -22,14 +22,8 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
-const app=new Vue(
-    {
-        el:"#root",
-        data:
-            elements=[]
-    }
-)
-
+//ciclo per popolare l'array elements all'interno di data
+elements=[];
 for (let index = 0; index < 5; index++) {
     const item = {
         img:items[index],
@@ -38,3 +32,13 @@ for (let index = 0; index < 5; index++) {
     };
     elements.push(item)
 }
+
+const app=new Vue(
+    {
+        el:"#root",
+        data:{
+            activeIndex:0,
+            thumbs:elements
+        }
+    }
+)
